@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d1b45" />
+    <title>BeCalm · 메일 연결</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="screen" aria-labelledby="title">
+      <!-- 디자인 목업의 iOS 상태 바: 데스크톱 미리보기 프레임에서만 보입니다 -->
+      <div class="status-bar" aria-hidden="true">
+        <span class="status-bar__time">9:41</span>
+        <img class="status-bar__icons" src="./assets/status-right.svg" width="77.4012" height="13" alt="" />
+      </div>
+
+      <header class="intro">
+        <img
+          class="page-dots"
+          src="./assets/page-dots.svg"
+          width="73.6814"
+          height="7.28"
+          alt="온보딩 6단계 중 2단계"
+        />
+        <h1 id="title" class="title">사용 중인 업무용 메일을<br />연결해주세요</h1>
+      </header>
+
+      <section class="picker" aria-labelledby="picker-label">
+        <p id="picker-label" class="picker__label">메일 선택</p>
+        <div class="picker__grid" role="group" aria-labelledby="picker-label">
+          <button type="button" class="provider provider--gmail" data-provider="Gmail" aria-pressed="false">
+            <span class="provider__check" aria-hidden="true">
+              <img class="provider__check-bg" src="./assets/check-circle.svg" width="21.9648" height="21.9648" alt="" />
+              <img class="provider__check-mark" src="./assets/check-mark.svg" width="11.088" height="7.8149" alt="" />
+            </span>
+            <img class="provider__logo" src="./assets/gmail.png" width="63" height="63" alt="" />
+            <span class="provider__name">Gmail</span>
+          </button>
+
+          <button type="button" class="provider provider--outlook" data-provider="Outlook" aria-pressed="false">
+            <span class="provider__check" aria-hidden="true">
+              <img class="provider__check-bg" src="./assets/check-circle.svg" width="21.9648" height="21.9648" alt="" />
+              <img class="provider__check-mark" src="./assets/check-mark.svg" width="11.088" height="7.8149" alt="" />
+            </span>
+            <img class="provider__logo" src="./assets/outlook.png" width="77" height="77" alt="" />
+            <span class="provider__name">Outlook</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="actions">
+        <button type="button" class="skip" id="skip">건너뛰기</button>
+        <button type="button" class="connect" id="connect" disabled>선택한 메일 연결하기</button>
+      </footer>
+
+      <p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
